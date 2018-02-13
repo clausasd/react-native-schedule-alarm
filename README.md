@@ -34,14 +34,6 @@
       compile project(':react-native-schedule-alarm')
   	```
 
-#### Windows
-[Read it! :D](https://github.com/ReactWindows/react-native)
-
-1. In Visual Studio add the `RNScheduleAlarm.sln` in `node_modules/react-native-schedule-alarm/windows/RNScheduleAlarm.sln` folder to their solution, reference from their app.
-2. Open up your `MainPage.cs` app
-  - Add `using Schedule.Alarm.RNScheduleAlarm;` to the usings at the top of the file
-  - Add `new RNScheduleAlarmPackage()` to the `List<IReactPackage>` returned by the `Packages` method
-
 
 ## Usage
 ```javascript
