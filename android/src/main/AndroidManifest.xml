@@ -1,11 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.clausasd.alarm">
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.clausasd.alarm">
     <application>
-        <receiver android:name=".RNScheduleAlarmReceiver">
-            <intent-filter>
-                <action android:name="REACT_NATIVE_ALARM"/>
-            </intent-filter>
-        </receiver>
+        <receiver android:name=".RNScheduleAlarmReceiver" />
+
+
     </application>
 </manifest>
   
