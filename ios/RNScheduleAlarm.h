@@ -8,7 +8,7 @@
 @import UserNotifications;
 @import UIKit;
 
-@interface RNAlarm : NSObject <RCTBridgeModule, UNUserNotificationCenterDelegate>
+@interface RNScheduleAlarm : NSObject <RCTBridgeModule, UNUserNotificationCenterDelegate>
 
 @end
 
