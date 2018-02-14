@@ -29,7 +29,8 @@ public class RNScheduleAlarmModule extends ReactContextBaseJavaModule {
     public void schedule(String scheduleAt, String title, String description, String soundUri) {
         Long time = Long.parseLong(scheduleAt);
         Intent notificationIntent = this.createNotificationIntent(title, description, soundUri);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(reactContext, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+        final int _id = (int) System.currentTimeMillis();
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(reactContext, _id, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         AlarmManager alarmManager = (AlarmManager) reactContext.getSystemService(Context.ALARM_SERVICE);
         alarmManager.set(AlarmManager.RTC_WAKEUP, time, pendingIntent);
     }

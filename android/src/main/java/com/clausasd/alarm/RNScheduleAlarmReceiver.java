@@ -15,6 +15,7 @@ import android.widget.Toast;
 import android.util.Log;
 
 import java.io.IOException;
+import java.util.Date;
 
 import static android.content.Context.NOTIFICATION_SERVICE;
 
@@ -24,7 +25,7 @@ public class RNScheduleAlarmReceiver extends BroadcastReceiver {
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         Notification notification = intent.getParcelableExtra("notification");
 
-        int id = intent.getIntExtra("notification-id", 0);
+        int id = (int) ((new Date().getTime() / 1000L) % Integer.MAX_VALUE);
         String fileName = intent.getStringExtra("fileName");
         notification.sound = Uri.parse(String.format("android.resource://%s/%s/%s", context.getPackageName(), "raw", fileName));
         notificationManager.notify(id, notification);
