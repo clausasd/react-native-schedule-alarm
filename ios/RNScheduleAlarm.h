@@ -5,7 +5,12 @@
 #import <React/RCTBridgeModule.h>
 #endif
 
-@interface RNScheduleAlarm : NSObject <RCTBridgeModule>
+@import UserNotifications;
+@import UIKit;
+
+@interface RNAlarm : NSObject <RCTBridgeModule, UNUserNotificationCenterDelegate>
 
 @end
+
+
   
